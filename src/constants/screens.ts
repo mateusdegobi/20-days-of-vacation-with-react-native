@@ -2,6 +2,7 @@ export enum FolderScreenNames {
   "Stopwatch" = "Stopwatch",
   "Weather" = "Weather",
   "MapPage" = "MapPage",
+  "CardSwipe" = "CardSwipe",
 }
 
 export interface IFolderScreens {
@@ -22,6 +23,10 @@ const folderScreens: IFolderScreens[] = [
   {
     title: "Map",
     path_screen: FolderScreenNames.MapPage,
+  },
+  {
+    title: "Card Swipe",
+    path_screen: FolderScreenNames.CardSwipe,
   },
 ];
 
