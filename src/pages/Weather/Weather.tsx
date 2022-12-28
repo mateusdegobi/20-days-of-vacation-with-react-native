@@ -4,6 +4,7 @@ import FooterInfoArea from "./components/FooterInfoArea/FooterInfoArea";
 import HeaderArea from "./components/HeaderArea/HeaderArea";
 import IconArea from "./components/IconArea/IconArea";
 import LinearBackground from "./components/LinearBackground";
+import StatusArea from "./components/StatusArea/StatusArea";
 import WeatherContextProvider from "./context/WeatherContext";
 
 export type Periods = "day" | "night";

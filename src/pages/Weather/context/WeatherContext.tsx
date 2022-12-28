@@ -23,10 +23,8 @@ const initialContext: IInitialContextProps = {
   currentPeriod: "day",
   city: "",
   temperature: 0,
-  windSpeed: 0,
+  wind_speed: 0,
   humidity: 0,
-  iconCode: "",
-  weatherDescription: "",
 };
 
 const WeatherContext = createContext(initialContext);
