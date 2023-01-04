@@ -1,36 +1,21 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import MapPage from "../pages/MapPage";
-import Stopwatch from "../pages/Stopwatch";
-import Weather from "../pages/Weather";
-import CardSwipe from "../pages/CardSwipe";
+import folderScreens from "../constants/screens";
+import Header from "../components/Header/Header";
 
 const Stack = createNativeStackNavigator();
 
 export default function FolderItemsNav() {
   return (
-    <Stack.Navigator initialRouteName="MapPage">
-      <Stack.Screen
-        name="Stopwatch"
-        component={Stopwatch}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="Weather"
-        component={Weather}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="MapPage"
-        component={MapPage}
-        options={{ headerShown: true }}
-      />
-      <Stack.Screen
-        name="CardSwipe"
-        component={CardSwipe}
-        options={{ headerShown: true }}
-      />
+    <Stack.Navigator screenOptions={{ header: () => <Header isReturn /> }}>
+      {folderScreens.map((screen) => (
+        <Stack.Screen
+          key={screen.screen}
+          name={screen.screen}
+          component={screen.component}
+        />
+      ))}
     </Stack.Navigator>
   );
 }

@@ -9,7 +9,7 @@ export default function FolderItem(
   props: ListRenderItemInfo<IFolderScreens>,
   redirectPage: (screen: string) => void
 ) {
-  const { title, path_screen } = props.item;
+  const { title, screen: path_screen } = props.item;
 
   const handleRedirect = () => redirectPage(path_screen);
 

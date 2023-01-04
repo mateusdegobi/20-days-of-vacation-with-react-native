@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, FlatList } from "react-native";
+import { FlatList, SafeAreaView, StatusBar } from "react-native";
 import React, { useCallback } from "react";
 import { useNavigation } from "@react-navigation/native";
 import folderScreens from "../../constants/screens";
@@ -12,12 +12,15 @@ export default function HomeFolder() {
   }, []);
 
   return (
-    <View style={{ flex: 1, alignItems: "center" }}>
-      <FlatList
-        data={folderScreens}
-        renderItem={(props) => FolderItem(props, redirectPage)}
-        numColumns={3}
-      />
-    </View>
+    <>
+      <StatusBar />
+      <SafeAreaView style={{ flex: 1, alignItems: "center" }}>
+        <FlatList
+          data={folderScreens}
+          renderItem={(props) => FolderItem(props, redirectPage)}
+          numColumns={3}
+        />
+      </SafeAreaView>
+    </>
   );
 }
