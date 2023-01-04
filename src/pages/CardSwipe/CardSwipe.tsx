@@ -1,10 +1,17 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { Container } from "./style";
+import Card from "./components/Card/Card";
+import { useSharedValue } from "react-native-reanimated";
+import cards from "../../constants/card-swipe/cardsToSwipe";
 
 export default function CardSwipe() {
+  const shuffleBack = useSharedValue(false);
+
   return (
-    <View>
-      <Text>CardSwipe</Text>
-    </View>
+    <Container>
+      {cards.map((card, index) => (
+        <Card key={index} card={card} index={index} shuffleBack={shuffleBack} />
+      ))}
+    </Container>
   );
 }
