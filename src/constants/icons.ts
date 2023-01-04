@@ -1,9 +1,6 @@
 import settings from "../assets/settings-sliders.png";
+import arrowLeft from "../assets/arrow-left.png";
 
-export type NameIconsTypes = "settings";
-// | "ghost"
-// | "knight"
-// | "eyeOpen"
-// | "eyeClose";
+export type NameIconsTypes = "settings" | "arrowLeft";
 
-export default { settings };
+export default { settings, arrowLeft };
