@@ -1,11 +1,13 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import HomeNavigation from "./src/routes/HomeNavigation";
 
 export default function App() {
   return (
     <NavigationContainer>
-      <HomeNavigation />
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <HomeNavigation />
+      </GestureHandlerRootView>
     </NavigationContainer>
   );
 }
