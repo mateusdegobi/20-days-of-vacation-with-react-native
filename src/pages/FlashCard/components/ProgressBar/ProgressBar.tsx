@@ -1,5 +1,5 @@
-import { View, Text } from "react-native";
 import React from "react";
+import { ProgressIndicator, ProgressView } from "./styles";
 
 interface IProgressBar {
   percent: number;
@@ -7,7 +7,8 @@ interface IProgressBar {
 
 export default function ProgressBar({ percent }: IProgressBar) {
   return (
-    <View>
-    </View>
+    <ProgressView>
+      <ProgressIndicator progress={percent} />
+    </ProgressView>
   );
 }
