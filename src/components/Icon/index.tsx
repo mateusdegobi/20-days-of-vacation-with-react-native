@@ -12,6 +12,7 @@ const Icon: React.FC<Omit<IconProps, "source">> = ({
   if (activeColor) {
     return (
       <IconContainer
+        resizeMode="stretch"
         size={size}
         source={icons[icon]}
         style={[{ tintColor: activeColor }, style]}
